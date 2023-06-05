@@ -14,9 +14,11 @@ export class HomeComponent {
   constructor(private _foodservice:FoodService,actevatedRoute:ActivatedRoute){
     actevatedRoute.params.subscribe((params)=>{
       if(params.searchTerm)
-      this.foods=this._foodservice.getAllFoodsBySearchTerm(params.searchTerm);
+      this.foods = this._foodservice.getAllFoodsBySearchTerm(params.searchTerm);
+      else if (params.tag)
+      this.foods = this._foodservice.getAllFoodByTag(params.tag);
       else
-      this.foods=this._foodservice.getAll();
+      this.foods = this._foodservice.getAll();
     })
   }
 

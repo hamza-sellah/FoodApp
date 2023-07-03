@@ -16,13 +16,13 @@ export const UserSchema = new Schema<User>({
     address: {type: String, required: true},
     isAdmin: {type: Boolean, required: true},
 }, {
+    timestamps: true,
     toJSON:{
         virtuals: true
     },
     toObject:{
         virtuals: true
-    },
-    timestamps: true
+    }
 });
 
 export const UserModel = model<User>('user', UserSchema);

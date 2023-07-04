@@ -2,9 +2,9 @@
     "name": "foodapp",
     "version": "1.0.0",
     "scripts": {
-                "start": "cd backend/built && node server.js",
-        "prebuild": "cd backend && npm run build",
-        "build": "cd frontend && npm run build"
+                "start": "cd backendapp/built && node server.js",
+        "prebuild": "cd backendapp && npm run build",
+        "build": "cd frontendapp && npm run build"
     }
 
 }
